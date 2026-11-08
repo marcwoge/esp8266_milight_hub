@@ -424,7 +424,7 @@ if (location.hostname != "") {
   webSocket.onmessage = function(e) {
     if (sniffing) {
       var message = e.data;
-      $('#sniffed-traffic').prepend('<pre>' + message + '</pre>');
+      $('#sniffed-traffic').prepend($('<pre>').text(message));
     }
   }
 }
